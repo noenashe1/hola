@@ -1,1 +1,30 @@
-#hola
+import turtle
+
+# Configurar la ventana y la tortuga
+window = turtle.Screen()
+window.bgcolor("black")
+t = turtle.Turtle()
+t.speed(1)
+t.color("red")
+t.penup()
+t.goto(0, -200)
+t.pendown()
+t.hideturtle()  # Ocultar el cursor de la tortuga
+t.setheading(270)
+
+# Dibujar el corazón
+def draw_heart():
+    t.begin_fill()
+    t.left(135)
+    t.forward(300)
+    t.circle(150, 180)
+    t.right(90)
+    t.circle(150, 180)
+    t.forward(300)
+    t.end_fill()
+
+# Dibujar el corazón
+draw_heart()
+
+# Mantener la ventana abierta hasta que se cierre
+turtle.done()
